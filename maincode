@@ -1,0 +1,697 @@
+# Main code for the calculator
+
+package calculadora;
+
+public class calc extends javax.swing.JFrame {
+    boolean soma, sub, divisao, multi, result, raiz, decimal, acao2;
+    float n1 = 0;
+    float n2 = 0;
+    float div = 10;
+    float div2 = 10;
+    String operacao;
+    
+    public calc() {
+        initComponents();
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MarcelaCaculator 2000");
+        setBackground(new java.awt.Color(204, 204, 204));
+        setName("calculadora"); // NOI18N
+        setResizable(false);
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(1);
+        jTextArea1.setTabSize(20);
+        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1.getAccessibleContext().setAccessibleName("");
+
+        jButton1.setText("1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("3");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("4");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("5");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("6");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("7");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("8");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("9");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("0");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("CLEAR");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("=");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText(",");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("+");
+        jButton14.setToolTipText("");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("*");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("-");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jButton17.setText("/");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("+/-");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setText("sqrt");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton13)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton10))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton7)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton8)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton9)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton19)
+                                .addGap(0, 11, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton3)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton4)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton5)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton6)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton1)
+                        .addComponent(jButton2)
+                        .addComponent(jButton3))
+                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton4)
+                        .addComponent(jButton5)
+                        .addComponent(jButton6))
+                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton7)
+                    .addComponent(jButton8)
+                    .addComponent(jButton9)
+                    .addComponent(jButton18)
+                    .addComponent(jButton19))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton13)
+                    .addComponent(jButton10)
+                    .addComponent(jButton12)
+                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 1 + n1*10;
+            jTextArea1.append("1");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 1 + n2*10;
+            jTextArea1.append("1");
+        }
+         if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 1/div;
+            div = div*10;
+            jTextArea1.append("1");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 1/div2;
+            div2 = div2*10;
+            jTextArea1.append("1");
+        }
+    }                                        
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 2 + n1*10;
+            jTextArea1.append("2");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 2 + n2*10;
+            jTextArea1.append("2");
+        }
+        if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 2/div;
+            div = div*10;
+            jTextArea1.append("2");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 2/div2;
+            div2 = div2*10;
+            jTextArea1.append("2");
+        }
+    }                                        
+    
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 3 + n1*10;
+            jTextArea1.append("3");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 3 + n2*10;
+            jTextArea1.append("3");
+        }
+         if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 3/div;
+            div = div*10;
+            jTextArea1.append("3");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 3/div2;
+            div2 = div2*10;
+            jTextArea1.append("3");
+        }
+    }                                        
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 4 + n1*10 ;
+            jTextArea1.append("4");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 4 + n2*10;
+            jTextArea1.append("4");
+        }
+         if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 4/div;
+            div = div*10;
+            jTextArea1.append("4");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 4/div2;
+            div2 = div2*10;
+            jTextArea1.append("4");
+        }
+    }                                        
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 5 + n1*10;
+            jTextArea1.append("5");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 5 + n2*10;
+            jTextArea1.append("5");
+        }
+         if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 5/div;
+            div = div*10;
+            jTextArea1.append("5");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 5/div2;
+            div2 = div2*10;
+            jTextArea1.append("5");
+        }
+    }                                        
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 6 + n1*10;
+            jTextArea1.append("6");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 6 + n2*10;
+            jTextArea1.append("6");
+        } if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 6/div;
+            div = div*10;
+            jTextArea1.append("6");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 6/div2;
+            div2 = div2*10;
+            jTextArea1.append("6");
+        }
+    }                                        
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 7 + n1*10;
+            jTextArea1.append("7");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 7 + n2*10;
+            jTextArea1.append("7");
+        }
+         if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 7/div;
+            div = div*10;
+            jTextArea1.append("7");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 7/div2;
+            div2 = div2*10;
+            jTextArea1.append("7");
+        }
+    }                                        
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 8 + n1*10;
+            jTextArea1.append("8");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 8 + n2*10;
+            jTextArea1.append("8");
+        }
+         if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 8/div;
+            div = div*10;
+            jTextArea1.append("8");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 8/div2;
+            div2 = div2*10;
+            jTextArea1.append("8");
+        }
+    }                                        
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        boolean acao = true;
+        if (acao == true && acao2 == false && decimal == false){
+            n1 = 9 + n1*10;
+            jTextArea1.append("9");
+            acao = false;
+        }
+        if (acao2 == true && decimal == false){
+            n2 = 9 + n2*10;
+            jTextArea1.append("9");
+        }
+         if (acao == true && acao2 == false && decimal == true){
+            n1 = n1 + 9/div;
+            div = div*10;
+            jTextArea1.append("9");
+            acao = false;
+        }
+        if (acao2 == true && decimal == true){
+            n2 = n2 + 9/div2;
+            div2 = div2*10;
+            jTextArea1.append("9");
+        }
+    }                                        
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        decimal = true;
+        jTextArea1.append(",");
+    }                                         
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        soma = true;
+        acao2 = true;
+        decimal = false;
+        jTextArea1.append(" + ");
+    }                                         
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        result = true;
+        float resul;
+        String resu;
+        if (soma == true){
+            resul = n1 + n2;
+            resu = String.valueOf(resul);
+            jTextArea1.append(" = " + resu + "\n \nObrigada por usar MarcelaCalculator 2000!");
+            soma = false;
+            result = false;
+            acao2 = false;
+        }
+        if (sub == true){
+            resul = n1 - n2;
+            resu = String.valueOf(resul);
+            jTextArea1.append(" = " + resu + "\n \nObrigada por usar MarcelaCalculator 2000!");
+            sub = false;
+            result = false;
+            acao2 = false;
+        }
+        if (multi == true){
+            resul = n1 * n2;
+            resu = String.valueOf(resul);
+            jTextArea1.append(" = " + resu + "\n \nObrigada por usar MarcelaCalculator 2000!");
+            multi = false;
+            result = false;
+            acao2 = false;
+        }
+        if (divisao == true){
+            resul = n1/n2;
+            resu = String.valueOf(resul);
+            jTextArea1.append(" = " + resu + "\n \nObrigada por usar MarcelaCalculator 2000!");
+            divisao = false;
+            result = false;
+            acao2 = false;
+        }
+        if (raiz == true){
+            if (n1 < 0){
+                jTextArea1.setText("O resultado é muito complexo pra mim.");
+                divisao = false;
+            }
+            resul = (float) Math.sqrt(n1);
+            resu = String.valueOf(resul);
+            jTextArea1.append(" = " + resu + "\n \nObrigada por usar MarcelaCalculator 2000!");
+            divisao = false;
+            result = false;
+        }
+    }                                         
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        n1 = 0;
+        n2 = 0;
+        soma = false;
+        sub = false;
+        multi = false;
+        divisao = false;
+        raiz = false;
+        decimal  = false;
+        acao2 = false;
+        div = 10;
+        div2 = 10;
+        jTextArea1.setText("");
+    }                                         
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        boolean acao = true;
+        if (acao == true && acao2 == false){
+            n1 = n1*10;
+            jTextArea1.append("0");
+            acao = false;
+        }
+        if (acao2 == true){
+            n2 = n2*10;
+            jTextArea1.append("0");
+        }
+    }                                         
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        sub = true;
+        acao2 = true;
+        decimal = false;
+        jTextArea1.append(" - ");
+    }                                         
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        multi = true;
+        acao2 = true;
+        decimal = false;
+        jTextArea1.append(" x ");
+    }                                         
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        divisao = true;
+        acao2 = true;
+        decimal = false;
+        jTextArea1.append("/");
+    }                                         
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        boolean acao = true;
+        if(acao == true && acao2 == false){
+        if (n1 > 0){
+            n1 = n1 *(-1);
+        jTextArea1.setText("-" + Float.toString(n1));
+        }
+        else{
+            n1 = n1 *(-1);
+            jTextArea1.setText(Float.toString(n1));
+        }
+        }
+        if (acao2 == true){
+            if(n2 > 0){
+            n2 = n2 * (-1);
+            if (soma == true){
+            jTextArea1.setText(Float.toString(n1)+ " + (-"+ Float.toString(n2)+")");
+            }
+            if (sub == true){
+                jTextArea1.setText(Float.toString(n1)+ " - (-"+ Float.toString(n2)+")");
+            }
+            if (multi == true){
+                jTextArea1.setText(Float.toString(n1)+ " * (-"+ Float.toString(n2) + ")");
+            }
+            if (divisao == true){
+                jTextArea1.setText(Float.toString(n1)+ " / (-"+ Float.toString(n2)+")");
+            }
+          }
+            else{
+                n2 = n2 *(-1);
+                if (soma == true){
+            jTextArea1.setText(Float.toString(n1)+ " + "+ Float.toString(n2)+")");
+            }
+            if (sub == true){
+                jTextArea1.setText(Float.toString(n1)+ " - "+ Float.toString(n2)+")");
+            }
+            if (multi == true){
+                jTextArea1.setText(Float.toString(n1)+ " * "+ Float.toString(n2) + ")");
+            }
+            if (divisao == true){
+                jTextArea1.setText(Float.toString(n1)+ " / "+ Float.toString(n2)+")");
+            }
+            }
+        }
+    }                                         
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        raiz = true;
+        jTextArea1.setText("√¯" + Float.toString(n1));
+    }                                         
+    
+    public static void main(String args[]) {
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new calc().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    // End of variables declaration                   
+}
